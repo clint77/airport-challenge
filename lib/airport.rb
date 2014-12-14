@@ -13,4 +13,7 @@ class Airport
     planes << plane
   end
 
+  def take_off_airport(plane)
+    planes.delete(plane)
+  end
 end
