@@ -1,11 +1,16 @@
-# class Airport
+class Airport
 
-#   def initialize
+  def planes
+    @plane ||= []  
 
-#   end
+  end
 
-#   def 
+  def plane_count
+    planes.count
+  end
 
-#   end
+  def land_to_airport(plane)
+    planes << plane
+  end
 
-# end
+end
