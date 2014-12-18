@@ -15,15 +15,15 @@ class Airport
     planes.count
   end
 
-  def land_to_airport(plane)
+  def accept_landing(plane)
     raise 'Airport is full' if full?
+    raise 'Plane cannot land due to stormy weather' if !weather_storm_generator?
     plane.land!
     planes << plane
   end
 
   def take_off_airport(plane)
-    #raise 'Storm is brewing' if weather_stormy?
-    raise 'Storm is brewing' if !weather_generator?
+    raise 'Storm is brewing' if !weather_storm_generator?
       plane.take_off!
       planes.delete(plane)
     
@@ -37,12 +37,12 @@ class Airport
     @capacity = planes
   end
 
-  def weather_generator?
-    if rand(1..10) < 8
-      then true
-      else false
-    end
-  end
+  # def weather_storm_generator?
+  #   if rand(1..10) < 8
+  #     then false
+  #     else true
+  #   end
+  # end
 
 
 end
