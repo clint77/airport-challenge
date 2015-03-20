@@ -9,8 +9,8 @@ The Airport Challenge is a software implementation of a working airport, with pl
 Responsibilites	| Collaborators
 ----------------|---------------
 Take off	      | Airport
-Be flying	      |
 Land	          | Airport
+Be flying	      |
 
 ### Class - Airport
 
