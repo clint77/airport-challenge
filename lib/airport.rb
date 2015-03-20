@@ -8,7 +8,6 @@ class Airport
 
   def planes
     @plane ||= []  
-
   end
 
   def plane_count
