@@ -26,7 +26,6 @@ class Airport
     raise 'Storm is brewing' if !weather_storm_generator?
       plane.take_off!
       planes.delete(plane)
-    
   end
 
   def full?
@@ -36,13 +35,5 @@ class Airport
   def capacity(planes)
     @capacity = planes
   end
-
-  # def weather_storm_generator?
-  #   if rand(1..10) < 8
-  #     then false
-  #     else true
-  #   end
-  # end
-
 
 end

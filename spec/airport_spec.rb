@@ -1,6 +1,7 @@
 require 'airport'
 require 'plane'
 require 'weather'
+
 describe Airport do
   let(:airport) { Airport.new}
   let(:plane) { Plane.new }
@@ -25,7 +26,7 @@ describe Airport do
 
     context 'traffic control' do
 
-      it 'a plane cannot cannot land if the airport is full' do
+      it 'a plane cannot land if the airport is full' do
         allow(airport).to receive(:weather_storm_generator?).and_return(true)
         expect(airport).not_to be_full
         10.times { airport.accept_landing(plane) }
